@@ -1,0 +1,19 @@
+
+
+<h2>Login</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline" style="display:block; margin-bottom: 1rem;">
+    <mat-label>Usuario</mat-label>
+    <input matInput [(ngModel)]="usuario" name="usuario" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="display:block; margin-bottom: 1rem;">
+    <mat-label>Contraseña</mat-label>
+    <input matInput [(ngModel)]="password" name="password" type="password" required />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Entrar</button>
+</form>
+
+<p style="color:red" *ngIf="error">{{ error }}</p>
