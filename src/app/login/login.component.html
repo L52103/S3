@@ -1,19 +1,22 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <div style="text-align:center;">
+      <mat-icon style="font-size: 3rem; color: #c9d1d9;">lock</mat-icon>
+      <h2 style="margin: 0.5rem 0 1.5rem 0;">Iniciar Sesión</h2>
+      <form (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="login-form-field">
+          <mat-label>Usuario</mat-label>
+          <input matInput [(ngModel)]="usuario" name="usuario" required />
+        </mat-form-field>
 
+        <mat-form-field appearance="outline" class="login-form-field">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type="password" required />
+        </mat-form-field>
 
-<h2>Login</h2>
-
-<form (ngSubmit)="onSubmit()">
-  <mat-form-field appearance="outline" style="display:block; margin-bottom: 1rem;">
-    <mat-label>Usuario</mat-label>
-    <input matInput [(ngModel)]="usuario" name="usuario" required />
-  </mat-form-field>
-
-  <mat-form-field appearance="outline" style="display:block; margin-bottom: 1rem;">
-    <mat-label>Contraseña</mat-label>
-    <input matInput [(ngModel)]="password" name="password" type="password" required />
-  </mat-form-field>
-
-  <button mat-raised-button color="primary" type="submit">Entrar</button>
-</form>
-
-<p style="color:red" *ngIf="error">{{ error }}</p>
+        <button mat-raised-button color="primary" type="submit" class="login-btn">Entrar</button>
+      </form>
+      <p style="color:#ff7b72; text-align:center; margin-top:1rem;" *ngIf="error">{{ error }}</p>
+    </div>
+  </mat-card>
+</div>

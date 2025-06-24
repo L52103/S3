@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
+// Angular Material modules necesarios:
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
@@ -8,6 +10,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 interface Producto {
   id: number;
@@ -51,7 +56,10 @@ interface Compra {
     MatCardModule,
     MatListModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatIconModule,
+    MatDividerModule,
+    MatFormFieldModule
   ],
   templateUrl: './dashboard.component.html',
 })
